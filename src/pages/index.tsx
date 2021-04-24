@@ -1,15 +1,15 @@
 import { GetStaticProps } from 'next';
-import { useContext } from 'react';
 import Image from 'next/image';
+import Link from 'next/link'
+import Head from 'next/head'
 import { format, parseISO } from 'date-fns'
 import ptBR from 'date-fns/locale/pt-BR'
-import Link from 'next/link'
 import { api } from '../services/api';
 import { convertDurationToTimeString } from '../utils/convertDurationToTimeString';
-import styles from './home.module.scss';
-import { PlayerContext } from '../contexts/PlayerContext';
+import { usePlayer } from '../contexts/PlayerContext';
 import Episode from './episodes/[slug]';
 
+import styles from './home.module.scss';
 
 // TIPAGEM DO EPISODIO
 type Episode = {
@@ -33,13 +33,18 @@ type HomeProps = {
 // HOME
 export default function Home({ latestEpisodes, allEpisodes }: HomeProps) {
 
-  const { playList } = useContext(PlayerContext)
+  const { playList } = usePlayer()
 
   const episodeList = [...latestEpisodes, ...allEpisodes];
 
   return (
     <div className={styles.homepage}>
       <section className={styles.latestEpisodes}>
+
+      <Head>
+        <title>Home | Podcastr</title>
+      </Head>
+
         <h2>Últimos lançamentos </h2>
 
         <ul>
