@@ -5,7 +5,7 @@
 </h1>
 
 <h4 align="center"> 
-	🚧  PODCASTR  Concluído 🚀 🚧
+	🚧  PODCASTR | Concluído 🚀 🚧
 </h4>
 
 <p align="center">
@@ -40,11 +40,8 @@ O NLW é uma experiência online com muito conteúdo prático, desafios e hacks 
 
 ### Web
 
-<p align="center" style="display: flex; align-items: flex-start; justify-content: center;">
-  <img alt="NextLevelWeek" title="#NextLevelWeek" src="./public/essa.png
-  " width="400px">
-
-  
+<p align="center">
+  <img alt="NextLevelWeek" title="#NextLevelWeek" src="/public/essa.png" width="400px">  
 </p>
 
 ---
